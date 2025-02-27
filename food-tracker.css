@@ -1,0 +1,249 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* Importing Poppins font */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://github.com/Anand7-hub/Fitness-Website-PowerArmor/blob/main/thumb-1920-977433.jpg'); /* Replace with your imagepath */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+    color: #fff; /* White text color */
+    font-family: 'Poppins', Arial, sans-serif; /* Changed to Poppins font */
+}
+
+/* Header Styles for Main Page */
+header {
+    position: center;
+    height: 40vh;
+    color: #fff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: flex; /* Align to the start (left) */
+    justify-content: center;
+    text-align: center; /* Align text to the left */
+    padding: 2rem; /* Increased padding */
+    left: -10%; /* Move header further left */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #004080; /* Dark blue background on hover */
+    border-radius: 5px;
+    color: #fff;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Header Content */
+.header-content {
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #fff; /* White text color */
+    padding: 15px 25px; /* Padding with dark blue background */
+    border-radius: 20px; /* Curved edges */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* Enhanced blue glowing border */
+    animation: glowing-border 1s infinite alternate; /* Reduced glow timer */
+}
+
+@keyframes glowing-border {
+    from {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(0, 0, 255, 1);
+    }
+}
+
+.header-quote {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #fff; /* White text color */
+}
+
+/* Main Styles for Food Tracker Page */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    border-radius: 10px; /* Rounded edges */
+}
+
+/* Food Tracker Section Styles */
+.food-tracker-section {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for food tracker */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Rounded edges */
+    margin-top: 40px; /* Space from other sections */
+}
+
+/* Ensure Food Tracker header has no transparent background */
+.food-tracker-section h1,
+.food-tracker-section h2 {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #fff; /* White text color */
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px; /* Rounded edges */
+}
+
+/* Meal Section Styles */
+.meal-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Darker background for meal sections */
+    border-radius: 10px;
+}
+
+.meal-section h2 {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #fff; /* White text */
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px; /* Rounded edges */
+}
+
+
+.meal-log {
+    
+    background-color: rgba(52, 53, 54, 0.9); /* Slightly transparent white background */
+    padding: 10px;
+    border: 1px solid #ddd;
+    min-height: 50px;
+    margin-bottom: 10px;
+}
+
+.add-food {
+    background-color: #240bb1; /* Blue background */
+    color: #fff; /* White text */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px; /* Rounded edges */
+}
+
+.add-food:hover {
+    background-color: #1c86ee; /* Slightly darker blue */
+}
+
+/* Nutrition Section Styles */
+.nutrition-section {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded edges */
+}
+#nutrition-pie-chart {
+    width: 20 !important; /* Ensure canvas takes full width of its container */
+    height: 20 !important; /* Adjust height automatically to maintain aspect ratio */
+}
+
+
+
+#macro-chart, #macro-consumption {
+    margin-top: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* On top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #1500d6;
+    width: 80%;
+    border-radius: 10px; /* Rounded edges */
+}
+
+.close {
+    color: #ece7e7;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #1e90ff; /* Blue color */
+    cursor: pointer;
+}
+
+#food-search-results {
+    list-style-type: none;
+    padding: 0;
+}
+
+#food-search-results li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #3109e6; /* Light background for search results */
+}
+
+#food-search-results li:hover {
+    background-color: #0c0b0b; /* Slightly darker on hover */
+}

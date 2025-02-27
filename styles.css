@@ -1,0 +1,318 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* Importing Poppins font */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(''); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+    color: #fff; /* White text color */
+    font-family: 'Poppins', Arial, sans-serif; /* Changed to Poppins font */
+}
+
+/* Header Styles */
+header {
+    position: center;
+    height: 50vh;
+    color: #fff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the start (left) */
+    justify-content: center;
+    text-align: center; /* Align text to the left */
+    padding: 2rem; /* Increased padding */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    left: -10%; /* Move header further left */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #004080; /* Dark blue background on hover */
+    border-radius: 5px;
+    color: #fff;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Header Content */
+.header-content {
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #fff; /* White text color */
+    padding: 15px 25px; /* Padding with dark blue background */
+    border-radius: 20px; /* Curved edges */
+    background-color: #000; /* Black background */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* Enhanced blue glowing border */
+    animation: glowing-border 1s infinite alternate; /* Reduced glow timer */
+}
+
+@keyframes glowing-border {
+    from {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(0, 0, 255, 1);
+    }
+}
+
+.header-quote {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #fff; /* White text color */
+}
+
+/* Section Content */
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5); /* Dark background for contrast */
+    border-radius: 10px;
+}
+
+.section-content img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    color: #fff; /* White color */
+    margin-bottom: 1rem;
+    padding: 15px 25px; /* Added padding similar to header */
+    border-radius: 20px; /* Curved edges */
+    background-color: #000; /* Black background */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* Enhanced blue glowing border */
+    animation: glowing-border 1s infinite alternate; /* Blue glowing border animation */
+}
+
+.text-content p {
+    font-size: 1.25rem;
+    color: #fff; /* White text */
+}
+
+/* Services Section Styles */
+#services {
+    padding: 2rem; /* Increased padding */
+    background: rgba(0, 0, 0, 0.5); /* Dark background */
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff; /* White color for heading */
+    text-align: center;
+    margin-bottom: 2rem; /* Increased space below heading */
+    padding: 15px 25px; /* Added padding similar to header */
+    border-radius: 20px; /* Curved edges */
+    background-color: #000; /* Black background */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* Enhanced blue glowing border */
+    animation: glowing-border 1s infinite alternate; /* Blue glowing border animation */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased space between cards */
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.card {
+    background: #1d1c1c;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 139, 0.8); /* Dark blue glowing shadow */
+    color: #fff;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    flex: 1 1 300px;
+    position: relative; /* For border animation */
+    padding: 1.5rem; /* Padding with dark blue background */
+    background: #000; /* Ensure dark background */
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    color: #fff; /* White text */
+    padding: 15px 25px; /* Added padding similar to header */
+    border-radius: 20px; /* Curved edges */
+    background-color: #000; /* Black background */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* Enhanced blue glowing border */
+    animation: glowing-border 1s infinite alternate; /* Blue glowing border animation */
+}
+
+.card-content p {
+    font-size: 0.9rem;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 139, 1); /* Enhanced glow effect */
+}
+
+/* Contact Form Styles */
+#contact {
+    padding: 2rem; /* Increased padding */
+    background: rgba(0, 0, 0, 0.5); /* Dark background */
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #fff; /* White color */
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 15px 25px; /* Added padding similar to header */
+    border-radius: 20px; /* Curved edges */
+    background-color: #000; /* Black background */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* Enhanced blue glowing border */
+    animation: glowing-border 1s infinite alternate; /* Blue glowing border animation */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #fff; /* White text */
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background: #1d1c1c; /* Input field background */
+    color: #fff; /* Input text color */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.8); /* Enhanced glow effect */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #000; /* Ensure dark background */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff; /* Button text color */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.8); /* Enhanced glow effect */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1d1c1c; /* Darker on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 255, 1); /* Increased glow on hover */
+}
+
+/* Footer Styles */
+footer {
+    padding: 2rem;
+    background: #000; /* Black background */
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+footer p {
+    margin: 0;
+    color: #fff; /* White text */
+}
+
+.sparkle-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    text-decoration: none;
+    background-color: #000; /* Black background */
+    border-radius: 20px; /* Curved edges */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.8); /* Blue glowing effect */
+    transition: box-shadow 0.3s;
+}
+
+.sparkle-button:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 255, 1); /* Enhanced glow on hover */
+}

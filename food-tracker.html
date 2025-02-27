@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker</title>
+    <link rel="stylesheet" href="food-tracker.css">
+    <script src="food-tracker.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#membership" class="membership">Membership</a></li>
+                <li><a href="#login" class="login">Log In</a></li>
+                <li><a href="#profile" class="profile"><img src="images/power-armor-fallout-retextures-image-ai-generated-art_1017715-1314.avif" alt="Profile Icon"></a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Food Tracker</h1>
+            <p class="header-quote">Track Your Meals and Achieve Your Fitness Goals</p>
+        </div>
+    </header>
+    <main>
+        <section class="food-tracker-section">
+            <!-- Meal Sections -->
+            <section class="meal-section">
+                <div class="section-content">
+                    <h2>Breakfast</h2>
+                    <div class="meal-log" id="breakfast-log"></div>
+                    <button class="add-food" data-meal="breakfast">Add Food</button>
+                </div>
+            </section>
+            <section class="meal-section">
+                <div class="section-content">
+                    <h2>Lunch</h2>
+                    <div class="meal-log" id="lunch-log"></div>
+                    <button class="add-food" data-meal="lunch">Add Food</button>
+                </div>
+            </section>
+            <section class="meal-section">
+                <div class="section-content">
+                    <h2>Snacks</h2>
+                    <div class="meal-log" id="snacks-log"></div>
+                    <button class="add-food" data-meal="snacks">Add Food</button>
+                </div>
+            </section>
+            <section class="meal-section">
+                <div class="section-content">
+                    <h2>Dinner</h2>
+                    <div class="meal-log" id="dinner-log"></div>
+                    <button class="add-food" data-meal="dinner">Add Food</button>
+                </div>
+            </section>
+
+            <!-- Nutrition Section -->
+            <section class="nutrition-section">
+                <div class="section-content">
+                    <h2>Nutrition Summary</h2>
+                    <div id="macro-chart"></div>
+                    <div id="macro-consumption"></div>
+                </div>
+            </section>
+        </section> <!-- End of food-tracker-section -->
+    </main>
+    <div id="food-search-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Search Food</h2>
+            <input type="text" id="food-search-input" placeholder="Enter food name">
+            <ul id="food-search-results"></ul>
+        </div>
+    </div>
+</body>
+</html>
