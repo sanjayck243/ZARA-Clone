@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Brand - Product Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Brand Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search...">
+    </header>
+
+    <section class="product-details">
+        <div class="product-images">
+            <img src="images/product1.jpg" alt="Product Image">
+            <!-- Additional Images -->
+        </div>
+        <div class="product-info">
+            <h2>Product Name</h2>
+            <p>$99.99</p>
+            <p>Product description goes here...</p>
+            <label for="size">Size:</label>
+            <select id="size">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" value="1" min="1">
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fashion Brand. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <form>
+            <input type="email" placeholder="Subscribe to our newsletter">
+            <button>Subscribe</button>
+        </form>
+    </footer>
+</body>
+</html>

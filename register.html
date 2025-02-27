@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Brand - Register</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/images/zara.png" alt="Brand Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search...">
+    </header>
+
+    <section class="register-container">
+        <h2>Register</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <small class="error" id="email-error">Please enter a valid email address.</small>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <small class="error" id="password-error">Password must be at least 8 characters.</small>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <small class="error" id="confirm-password-error">Passwords do not match.</small>
+
+            <label>
+                <input type="checkbox" id="show-password"> Show Password
+            </label>
+
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fashion Brand. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <form>
+            <input type="email" placeholder="Subscribe to our newsletter">
+            <button>Subscribe</button>
+        </form>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
